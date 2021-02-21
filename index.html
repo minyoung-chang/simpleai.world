@@ -1,66 +1,46 @@
 <!doctype html>
 
 <head>
-  <title>Your title</title>
+  <title>Simple AI World</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="shortcut icon" href="/static/images/shortcut.jpg"/>
 </head>
 
 <style>
-  .pred-container {
-    margin-bottom: 20px;
-  }
-
-  .pred-container > div {
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top;
-  }
-
-  .row {
-    display: table-row;
-  }
-  .cell {
-    display: table-cell;
-    padding-right: 20px;
-  }
-
-  #file-container {
-    margin-bottom: 20px;
+  body {
+  font-family: Arial, Helvetica, sans-serif;
   }
 </style>
 
 <body>
-  <div class="tfjs-example-container">
-    <section class='title-area'>
-      <h1>TensorFlow.js: Using a Keras model in the browser</h1>
-    </section>
+  <!-- <div class="tfjs-example-container"> -->
+  <div class="container-1">
+    <h2>Which Animal?</h2>
+    <div class="flex-box-container-1">
+      <section>
+        <p class='section-head'>Status</p>
+        <div id="status"></div>
+      </section>
+    </div>
 
     <section>
-      <p class='section-head'>Description</p>
-      <p>
-        This file is based on <a>https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet</a>.
-      </p>
-    </section>
 
-    <section>
-      <p class='section-head'>Status</p>
-      <div id="status"></div>
-    </section>
-
-    <section>
-      <p class='section-head'>Model Output</p>
-
-      <div id="file-container" style="display: none">
-        Upload an image: <input type="file" id="files" name="files[]" multiple />
+      <div class="flex-box-container-1"></div>
+        <div id="file-container" style="display: none">
+          Upload an image: <input type="file" id="files" name="files[]" multiple />
+        </div>
       </div>
 
-      <div id="predictions"></div>
-
-      <img style="display: none" id="cat" src="cat.jpg" width=192 height=192 />
+      <div class="flex-box-container-1" id="predictions">
+        <img style="display: none" id="cat" src="cat.jpg" width=192 height=192 />
+      </div>
+        
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
-    <script src="index.js"></script>
+    <script src="whichAnimal/index.js"></script>
   </div>
 </body>

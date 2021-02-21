@@ -120,15 +120,20 @@ function showResults(imgElement, classes) {
   predictionContainer.className = 'pred-container';
 
   const imgContainer = document.createElement('div');
+  imgContainer.classList.add("flex-box-container-1")
   imgContainer.appendChild(imgElement);
   predictionContainer.appendChild(imgContainer);
 
   const probsContainer = document.createElement('div');
+
+  const row = document.createElement('div');
+
   for (let i = 0; i < classes.length; i++) {
-    const row = document.createElement('div');
+    // const row = document.createElement('div');
     row.className = 'row';
 
     const classElement = document.createElement('div');
+    classElement.classList.add('.flex-box-container-1')
     classElement.className = 'cell';
     classElement.innerText = classes[i].className;
     row.appendChild(classElement);
